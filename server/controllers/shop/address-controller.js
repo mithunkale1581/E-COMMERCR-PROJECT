@@ -37,7 +37,7 @@ const addAddress = async (req, res) => {
 
 const fetchAllAddress = async (req, res) => {
   try {
-    const userId = req.params;
+    const { userId } = req.params;
 
     if (!userId) {
       return res.status(400).json({

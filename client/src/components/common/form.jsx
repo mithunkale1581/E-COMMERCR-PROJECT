@@ -11,7 +11,7 @@ import { Textarea } from "../ui/textarea";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 
-const CommonForm = ({
+const  CommonForm = ({
   formControls,
   formData,
   setFormData,

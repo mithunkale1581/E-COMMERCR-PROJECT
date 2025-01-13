@@ -90,14 +90,14 @@ export const addProductFormElements = [
     name: "salePrice",
     componentType: "input",
     type: "number",
-    placeholder: "Enter product sale price",
+    placeholder: "Enter sale price (optional)",
   },
   {
     label: "Total Stock",
     name: "totalStock",
     componentType: "input",
     type: "number",
-    placeholder: "Enter Tota Stock",
+    placeholder: "Enter total stock",
   },
 ];
 
@@ -106,6 +106,11 @@ export const shoppingViewHeaderMenuItems = [
     id: "home",
     label: "Home",
     path: "/shop/home",
+  },
+  {
+    id: "products",
+    label: "Products",
+    path: "/shop/listing",
   },
   {
     id: "men",
@@ -123,14 +128,19 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
+    id: "footwear",
+    label: "Footwear",
+    path: "/shop/listing",
+  },
+  {
     id: "accessories",
     label: "Accessories",
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
-    path: "/shop/listing",
+    id: "search",
+    label: "Search",
+    path: "/shop/search",
   },
 ];
 
@@ -146,7 +156,7 @@ export const brandOptionsMap = {
   nike: "Nike",
   adidas: "Adidas",
   puma: "Puma",
-  levi: "Levi's",
+  levi: "Levi",
   zara: "Zara",
   "h&m": "H&M",
 };
@@ -174,4 +184,41 @@ export const sortOptions = [
   { id: "price-hightolow", label: "Price: High to Low" },
   { id: "title-atoz", label: "Title: A to Z" },
   { id: "title-ztoa", label: "Title: Z to A" },
+];
+
+export const addressFormControls = [
+  {
+    label: "Address",
+    name: "address",
+    componentType: "input",
+    type: "text",
+    placeholder: "Enter your address",
+  },
+  {
+    label: "City",
+    name: "city",
+    componentType: "input",
+    type: "text",
+    placeholder: "Enter your city",
+  },
+  {
+    label: "Pincode",
+    name: "pincode",
+    componentType: "input",
+    type: "text",
+    placeholder: "Enter your pincode",
+  },
+  {
+    label: "Phone",
+    name: "phone",
+    componentType: "input",
+    type: "text",
+    placeholder: "Enter your phone number",
+  },
+  {
+    label: "Notes",
+    name: "notes",
+    componentType: "textarea",
+    placeholder: "Enter any additional notes",
+  },
 ];
