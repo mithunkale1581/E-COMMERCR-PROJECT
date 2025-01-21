@@ -64,9 +64,9 @@ const authSlice = createSlice({
   reducers: {
     setUser: (state, action) => {},
     resetTokenAndCredentials: (state) => {
-      state.token = null;
-      state.user = null;
       state.isAuthenticated = false;
+      state.user = null;
+      state.token = null;
     },
   },
   extraReducers: (builder) => {
