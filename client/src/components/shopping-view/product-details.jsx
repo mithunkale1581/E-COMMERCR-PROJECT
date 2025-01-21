@@ -23,8 +23,6 @@ const ProductDetailsDialog = ({ open, setOpen, productDetails }) => {
   const { reviews } = useSelector((state) => state.shopReview);
 
   function handleRatingChange(getRating) {
-    console.log(getRating, "getRating");
-
     setRating(getRating);
   }
 
@@ -95,8 +93,6 @@ const ProductDetailsDialog = ({ open, setOpen, productDetails }) => {
     if (productDetails !== null) dispatch(getReviews(productDetails?._id));
   }, [productDetails]);
 
-  console.log(reviews, "reviews");
-
   const averageReview =
     reviews && reviews.length > 0
       ? reviews.reduce((sum, reviewItem) => sum + reviewItem.reviewValue, 0) /
@@ -140,7 +136,9 @@ const ProductDetailsDialog = ({ open, setOpen, productDetails }) => {
             <div className="flex gap-0.5 items-center">
               <StarRatingComponent rating={averageReview} />
             </div>
-            <span className="text-muted-foreground">({averageReview.toFixed(2)})</span>
+            <span className="text-muted-foreground">
+              ({averageReview.toFixed(2)})
+            </span>
           </div>
           <div className="mt-5 mb-5">
             {productDetails?.totalStock === 0 ? (
