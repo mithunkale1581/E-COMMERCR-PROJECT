@@ -17,8 +17,6 @@ const ShoppingCheckout = () => {
   const dispatch = useDispatch();
   const { toast } = useToast();
 
-  console.log("currentSelectedAddress", currentSelectedAddress);
-
   const totalCartAmount =
     cartItems && cartItems.items && cartItems.items.length > 0
       ? cartItems.items.reduce(
@@ -81,8 +79,6 @@ const ShoppingCheckout = () => {
       payerId: "",
     };
 
-    console.log("orderData", orderData);
-
     dispatch(createNewOrder(orderData)).then((data) => {
       if (data?.payload?.success) {
         setIsPaymemntStart(true);
@@ -111,7 +107,7 @@ const ShoppingCheckout = () => {
         <div className="flex flex-col gap-4">
           {cartItems && cartItems.items && cartItems.items.length > 0
             ? cartItems.items.map((item) => (
-                <UserCartItemsContent cartItems={item} />
+                <UserCartItemsContent cartItem={item} />
               ))
             : null}
           <div className="mt-8 space-y-4">
